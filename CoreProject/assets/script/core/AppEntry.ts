@@ -12,7 +12,7 @@ const {ccclass, executionOrder,property} = cc._decorator;
 @executionOrder(-1)
 export default class AppEntry extends cc.Component 
 {
-    @property(Boolean)
+    @property(cc.Boolean)
     useFgui: Boolean = false; //切换UI
 
     protected onLoad(): void 
