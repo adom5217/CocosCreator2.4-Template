@@ -4,6 +4,6 @@
 [框架介绍](https://github.com/yanmingjie0223/CocosCreator)
 
 #待完善
-1、protbuff 支持
+1、protobuff 支持
 2、常用工具类
 3、制作一款小游戏
