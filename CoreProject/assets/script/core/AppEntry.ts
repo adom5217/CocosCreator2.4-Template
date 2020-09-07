@@ -18,7 +18,10 @@ export default class AppEntry extends cc.Component
     protected onLoad(): void 
     {
         this.loadJson();
-
+        //碰撞
+        cc.director.getCollisionManager().enabled = true; 
+        cc.director.getPhysicsManager().enabled = true;
+        cc.view.enableAutoFullScreen(true);
     }
     
     protected update(dt: number): void {
@@ -63,7 +66,8 @@ export default class AppEntry extends cc.Component
         {
             //ccui 初始化
             App.UIManager.initUIConf(UICF);
-            App.UIManager.open(UIID.UILogin);//第一个UI
+            //App.UIManager.open(UIID.UILogin);//第一个UI
+            App.UIManager.open(UIID.GameStart);//第一个UI
         }
         
     }

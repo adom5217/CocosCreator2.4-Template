@@ -241,8 +241,7 @@ export default class UIManager extends Singleton
 
         // 刷新其他UI
         this.updateUI();
-        cc.log('sdsdsds');
-        cc.log(this.UIStack.length);
+        
         // 从那个界面打开的
         let fromUIID = 0;
         if (this.UIStack.length > 1) {
