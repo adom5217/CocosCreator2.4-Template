@@ -20,7 +20,7 @@ import PlatformManager from "./manager/PlatformManager";
 import I18nManager from "./manager/I18nManager";
 import SoundManager from "./manager/SoundManager";
 import HttpManager from "./manager/HttpManager";
-import UIManager from "./ui/UIManager";
+import UIManager from "./manager/UIManager";
 import NetManager from "./manager/NetManager";
 
 /*

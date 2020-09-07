@@ -1,5 +1,5 @@
 
-import { UIConf } from "./UIManager";
+import { UIConf } from "../manager/UIManager";
 
 export enum UIID {
     UILogin,

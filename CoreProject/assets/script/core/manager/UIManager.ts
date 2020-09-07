@@ -1,4 +1,4 @@
-import { UIView, UIShowTypes } from "./UIView";
+import { UIView, UIShowTypes } from "../ui/UIView";
 import App from "../App";
 import Singleton from "../base/Singleton";
 
@@ -177,7 +177,6 @@ export default class UIManager extends Singleton
         //加载UI资源prefab  以下必须要成功的
         App.ResManager.loadRes(uiPath, (prefab:cc.Prefab)=>{
 
-            cc.log(prefab);
             if (null == prefab) 
             {
                 cc.error(`getOrCreateUI getResAddUse ${uiId} faile, path: ${uiPath}`);
@@ -241,8 +240,7 @@ export default class UIManager extends Singleton
 
         // 刷新其他UI
         this.updateUI();
-        cc.log('sdsdsds');
-        cc.log(this.UIStack.length);
+        
         // 从那个界面打开的
         let fromUIID = 0;
         if (this.UIStack.length > 1) {
