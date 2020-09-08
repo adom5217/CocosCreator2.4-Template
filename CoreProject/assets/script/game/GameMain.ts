@@ -12,8 +12,8 @@ export default class GameStart extends UIView {
     @property([cc.Node])
     bgList:cc.Node[] = [];
 
-    @property(Number)
-    spend:Number = 1;
+    @property(cc.Float)
+    spend = 1.0;
     start()
     {
         
@@ -25,7 +25,7 @@ export default class GameStart extends UIView {
         this.bgList.forEach((it)=>{
             if(it)
             {
-                let y = it.position.y-this.spend.valueOf();
+                let y = it.position.y-this.spend;
                 if(y<-1600)//循环
                     y = 1600;
                 it.setPosition(it.position.x,y);
