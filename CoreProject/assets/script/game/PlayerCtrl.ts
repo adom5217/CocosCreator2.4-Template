@@ -1,3 +1,4 @@
+import Enemy from "./Enemy";
 
 const {ccclass, property} = cc._decorator;
 
@@ -17,9 +18,11 @@ export default class PlayerCtrl extends cc.Component {
     
     }
 
-    public onAttack()
+    public onAttack(enemy:any,self:any)
     {
         cc.log("开始攻击动作");
+
+        enemy.getComponent(Enemy).onBeAttack(self);
     }
 
     

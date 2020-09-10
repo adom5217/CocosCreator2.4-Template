@@ -1,6 +1,7 @@
 
 
 import App from "../core/App";
+import PlayerCtrl from "./PlayerCtrl";
 
 
 const {ccclass, property} = cc._decorator;
@@ -85,9 +86,10 @@ export default class TouchEvent extends cc.Component {
                     .start()
     }
     
-    onMoveAttack()
+    onMoveAttack(node:any,self:any)
     {
         this.movetween.stop();
+        //随机动画
         let num = App.RandomUtils.randomArray([0,1]);
         cc.log(num);
         if(num==0)
@@ -97,7 +99,7 @@ export default class TouchEvent extends cc.Component {
         {
             this.playerAnimation("player_attack1");
         }
-        
+        this.getComponent(PlayerCtrl).onAttack(node,self);
         cc.tween(this.node)
         .to(0.3, { y: this.initY,scale:this.scale}, { easing: 'backOut'})
         .call(()=>{this.playerAnimation("player_idle"); })
@@ -110,7 +112,7 @@ export default class TouchEvent extends cc.Component {
         
         if(self.tag == 10&& other.tag==0)
         {
-            this.onMoveAttack();     
+            this.onMoveAttack(other,self);     
         }
     }
 

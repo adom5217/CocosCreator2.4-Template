@@ -16,8 +16,7 @@ export default class GameStart extends UIView {
     spend = 1.0;
     start()
     {
-        
-
+        //App.SoundManager.playMusic("audio/bg5");
     }
     //背景跑起来
     update (dt) 

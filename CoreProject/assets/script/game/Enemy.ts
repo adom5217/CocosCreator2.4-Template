@@ -20,23 +20,22 @@ export default class Enemy extends cc.Component
     // update (dt) {}
 
     //碰撞反馈
-    onCollisionEnter(other:any,self:any)
+    public onBeAttack(other:any)
     {
-        cc.log("onCollisionEnter enemy"+other.tag,self.tag);
+        cc.log("onBeAttack enemy"+other.tag);
+        let obj = cc.instantiate(this.hitEffect);
+        obj.parent = this.node;
+        obj.position = cc.v3(0,0,0);
+        obj.active =true;
         
-        if(other.tag==10)
-        {
-              //模拟死亡
-              this.playAnimation("boss3_die");
-              let obj = cc.instantiate(this.hitEffect);
-              obj.parent = this.node;
-              obj.position = cc.v3(0,0,0);
-              obj.active =true;
-              this.scheduleOnce(()=>{
-                obj.destroy();
-                this.playAnimation("boss3_idle");
-              },1);
-        }
+        //模拟死亡
+        this.playAnimation("boss3_die");
+        
+        this.scheduleOnce(()=>{
+            obj.destroy();
+            this.playAnimation("boss3_idle");
+        },1);
+        
     }
 
     playAnimation(type)
