@@ -1,0 +1,37 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "lang",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 1.0166666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "431ee520-47d4-4bd4-bdc0-cfc7db35502f"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "a6cb782e-8f38-4947-949c-340a911666e8"
+            }
+          },
+          {
+            "frame": 1,
+            "value": {
+              "__uuid__": "431ee520-47d4-4bd4-bdc0-cfc7db35502f"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

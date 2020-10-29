@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "boss3_attack",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 1.0166666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "b05cb2cd-9dbb-458c-b784-f49a3536f715"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "ccfddfd0-bf29-447d-b5c5-6722ba54d478"
+            }
+          },
+          {
+            "frame": 0.6666666666666666,
+            "value": {
+              "__uuid__": "6f834ec5-6c8f-4408-a018-61f85a587c8a"
+            }
+          },
+          {
+            "frame": 1,
+            "value": {
+              "__uuid__": "ccfddfd0-bf29-447d-b5c5-6722ba54d478"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
