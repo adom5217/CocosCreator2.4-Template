@@ -45,7 +45,7 @@ export default class ViewManager extends Singleton {
     public show(ctrlClass: {new(): BaseCtrl}, modelClass: {new(): BaseModel}, viewClass: {new(): BaseView}, viewData: BaseViewData, showType: number = ViewShowType.MULTI_VIEW, layer?: string): BaseView {
         const key: string = (viewClass as any).key;
         if (!key) {
-            App.DebugUtils.error('该view未存在key，请在检查一下遗漏！');
+            App.Debug.error('该view未存在key，请在检查一下遗漏！');
         }
         // 单个窗体显示
         if (showType === ViewShowType.SINGLETON_VIEW) {
@@ -69,7 +69,7 @@ export default class ViewManager extends Singleton {
 
         if (layer) { view.layer = layer; }
         if (!view.layer) {
-            App.DebugUtils.error('该view未设置显示layer层！');
+            App.Debug.error('该view未设置显示layer层！');
         }
 
         const layerCom: fgui.GComponent = App.LayerManager.getLayerComponent(view.layer);

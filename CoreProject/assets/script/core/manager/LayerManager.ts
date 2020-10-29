@@ -63,7 +63,7 @@ export default class LayerManager extends Singleton {
                 layerCom = ViewLayer.MAX_COMPONENT;
                 break;
             default:
-                App.DebugUtils.error(`${layer} 是ViewLayer中未定义层级！`);
+                App.Debug.error(`${layer} 是ViewLayer中未定义层级！`);
                 break;
         }
         return layerCom;

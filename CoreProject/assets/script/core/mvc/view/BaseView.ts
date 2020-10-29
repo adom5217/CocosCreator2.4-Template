@@ -239,7 +239,7 @@ export default class BaseView extends BComponent {
      */
     private initStart(): void {
         if (!this._pkgName || !this._resName) {
-            App.DebugUtils.warn('该界面包名不存在！');
+            App.Debug.warn('该界面包名不存在！');
             return;
         }
 

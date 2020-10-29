@@ -12,6 +12,9 @@ export default class I18n {
 
     private _language: I18nType;
 
+    private EnConfig: { [key: string]: string; } = { };
+    private ZhConfig: { [key: string]: string; } = { };
+    
     public constructor() {
         // 构造函数
     }
@@ -26,20 +29,22 @@ export default class I18n {
         let configName: string;
         switch (this.language) {
             case I18nType.EN:
-                config = I18nEnConfig;
+                //config = I18nEnConfig;
+                config = this.EnConfig;
                 configName = 'I18nEnConfig';
                 break;
             case I18nType.ZH:
-                config = I18nZhConfig;
+                //config = I18nZhConfig;
+                config = this.ZhConfig;
                 configName = 'I18nZhConfig';
                 break;
             default:
-                App.DebugUtils.error(`${this.language} 无对应语言文本配置！`);
+                App.Debug.error(`${this.language} 无对应语言文本配置！`);
                 return '';
         }
         let value: string = config[key];
         if (!value) {
-            App.DebugUtils.error(`${configName}中无key为${key}文本配置！`);
+            App.Debug.error(`${configName}中无key为${key}文本配置！`);
             return '';
         }
         // 替换指定值
@@ -63,5 +68,20 @@ export default class I18n {
     public set language(language: I18nType) {
         this._language = language;
     }
-
+    //外部初始化配置
+    public setConfig(language,config:any)
+    {
+        switch (language) 
+        {
+            case I18nType.EN:
+                this.EnConfig=config;
+                break;
+            case I18nType.ZH:
+                this.ZhConfig = config;
+                break;
+            default:
+                App.Debug.error(`${this.language} 无对应语言文本配置！`);
+                return '';
+        }
+    }
 }

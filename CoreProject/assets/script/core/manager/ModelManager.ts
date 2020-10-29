@@ -33,10 +33,10 @@ export default class ModelManager extends Singleton {
         }
         else {
             if (!key) {
-                App.DebugUtils.error('注册的该model不存在key');
+                App.Debug.error('注册的该model不存在key');
             }
             else {
-                App.DebugUtils.warn('注册的该model已存在，请使用统一数据源！');
+                App.Debug.warn('注册的该model已存在，请使用统一数据源！');
             }
         }
     }
@@ -52,7 +52,7 @@ export default class ModelManager extends Singleton {
             return this._modelCache[key];
         }
         else {
-            App.DebugUtils.warn('获取model数据源对象不存在！');
+            App.Debug.warn('获取model数据源对象不存在！');
         }
         return null;
     }

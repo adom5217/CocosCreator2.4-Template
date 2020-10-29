@@ -16,7 +16,7 @@ export default class I18nManager extends Singleton {
         super();
     }
 
-    public init(language: I18nType = I18nType.ZH): void {
+    public init(language: I18nType = I18nType.EN): void {
         this.i18n = new I18n();
         this.language = language;
     }
@@ -38,4 +38,9 @@ export default class I18nManager extends Singleton {
         this.i18n.language = language;
     }
 
+    public setConfig(conf1:any,conf2:any)
+    {
+        this.i18n.setConfig(I18nType.EN,conf1);
+        this.i18n.setConfig(I18nType.ZH,conf2);
+    }
 }

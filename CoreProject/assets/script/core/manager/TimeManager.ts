@@ -44,7 +44,7 @@ export default class TimeManager extends Singleton {
      */
     public get serverTime(): number {
         if (this._serverTime === void 0) {
-            App.DebugUtils.warn('服务器时间还未同步，请先同步时间！');
+            App.Debug.warn('服务器时间还未同步，请先同步时间！');
             return null;
         }
         return this._serverTime;

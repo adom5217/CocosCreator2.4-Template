@@ -128,7 +128,7 @@ export default class StageManager extends Singleton {
                     _x = this.stageWidth- _w;
                     break;
                 default:
-                    App.DebugUtils.error(`配置文件systemConfig.json中alignH: ${alignH}不支持！`);
+                    App.Debug.error(`配置文件systemConfig.json中alignH: ${alignH}不支持！`);
                     break;
             }
             switch (alignV) {
@@ -142,7 +142,7 @@ export default class StageManager extends Singleton {
                     _y = this.stageHeight - _h;
                     break;
                 default:
-                    App.DebugUtils.error(`配置文件systemConfig.json中alignH: ${alignV}不支持！`);
+                    App.Debug.error(`配置文件systemConfig.json中alignH: ${alignV}不支持！`);
                     break;
             }
         }

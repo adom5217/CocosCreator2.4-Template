@@ -24,7 +24,7 @@ export default class EffectUtils extends Singleton {
      */
     public startTyperEffect(tfObj: fgui.GTextField, content: string, interval: number = 120, thisObj: any = null, callback: Function = null, agrs: Array<any> = null): void {
         if (!tfObj) {
-            App.DebugUtils.warn('该打字机效果对象未空！');
+            App.Debug.warn('该打字机效果对象未空！');
             return;
         }
         tfObj.text = '';

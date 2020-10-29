@@ -197,7 +197,8 @@ export default class LoadManager extends Singleton {
             if (keys.indexOf(resources[i].name) !== -1) {
                 resFiles.push({
                     url: resources[i].url,
-                    type: this.getType(resources[i].type)
+                    type: this.getType(resources[i].type),
+                    data:''
                 });
                 if (resFiles.length >= keyLen) {
                     break;

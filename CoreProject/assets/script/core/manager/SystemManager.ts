@@ -64,7 +64,7 @@ export default class SystemManager extends Singleton {
                 platformMini = window['wx'];
                 break;
             default:
-                App.DebugUtils.error(`${platformMini} 平台还未处理！`);
+                App.Debug.error(`${platformMini} 平台还未处理！`);
                 return;
         }
         // 目前指定微信小游戏和QQ小游戏平台

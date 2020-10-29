@@ -6,7 +6,8 @@
  */
 export interface ResFile {
     url: string,
-    type: typeof cc.Asset
+    type: typeof cc.Asset,
+    data:string
 }
 
 export const enum FitType {
@@ -106,4 +107,14 @@ export const enum ViewEvent {
      * 逐个弹窗结束
      */
     WINDOW_CLOSE = 'window_close',
+}
+
+
+export const enum GlobelEvent{
+
+    GAME_SHOW = 'game_onshow',
+
+    GAME_Hide = 'game_onhide',
+
+    
 }

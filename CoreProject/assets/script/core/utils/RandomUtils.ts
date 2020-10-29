@@ -13,7 +13,7 @@ export default class RandomUtils extends Singleton {
     }
 
     /**
-     * 获取一个区间的随机数 (from, end)
+     * 获取一个区间的随机数 (from, end) 都包含
      * @param {number} from 最小值
      * @param {number} end 最大值
      * @returns {number}
@@ -24,7 +24,13 @@ export default class RandomUtils extends Singleton {
         const range: number = max - min;
         return min + Math.random() * range;
     }
-
+    public randomInt(from: number, end: number): number {
+        const min: number = Math.min(from, end);
+        const max: number = Math.max(from, end);
+        const range: number = max - min;
+        const value = min + Math.random() * range
+        return  parseInt(value.toString());
+    }
     /**
      * 获取数组中随机一个单元
      * @param arr 数组数据源

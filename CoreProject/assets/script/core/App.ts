@@ -105,7 +105,7 @@ export default class App {
         return DateUtils.getInstance<DateUtils>();
     }
 
-    public static get DebugUtils(): DebugUtils {
+    public static get Debug(): DebugUtils {
         return DebugUtils.getInstance<DebugUtils>();
     }
 
